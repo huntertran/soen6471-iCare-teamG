@@ -19,6 +19,7 @@ SOEN6471 - TEAM G - iCare project
 * UML tool: draw.io
 * UML specific version: define later
 * Latex document: [Overleaf](https://www.overleaf.com/project/5ebc50fe232e7c0001a26413)
+* Shared collaboration documents: [SOEN6471 Project folder on Google Drive](https://drive.google.com/drive/u/0/folders/1XqrZC_K5GWKAGo5Gh2oxO0GH3G9naT53)
 
 ## 1.2. Roles and Responsibilities
 <a id="markdown-Roles%20and%20Responsibilities" name="Roles%20and%20Responsibilities"></a>
