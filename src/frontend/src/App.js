@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Contacts from './components/contact'
+import Contact from './components/contact'
 
 class App extends Component {
 
@@ -18,7 +18,7 @@ class App extends Component {
 
   render() {
     return (
-      <Contacts contacts={this.state.contacts} />
+      <Contact contacts={this.state.contacts} />
     );
   }
 }
