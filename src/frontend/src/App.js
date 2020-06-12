@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Contact from './components/contact'
+import Dashboard from "./components/Dashboard";
 
 class App extends Component {
 
@@ -8,7 +8,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8080/contacts')
+    fetch('http://localhost:8080/profile')
       .then(res => res.json())
       .then((data) => {
         this.setState({ contacts: data })
@@ -18,7 +18,7 @@ class App extends Component {
 
   render() {
     return (
-      <Contact contacts={this.state.contacts} />
+      <Dashboard />
     );
   }
 }

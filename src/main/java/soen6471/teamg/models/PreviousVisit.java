@@ -11,52 +11,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({ "lat", "lng" })
-public class Geo {
+@JsonPropertyOrder({ "dateTime", "description" })
+public class PreviousVisit {
 
-    @JsonProperty("lat")
-    private String lat;
-    @JsonProperty("lng")
-    private String lng;
+    @JsonProperty("dateTime")
+    private String dateTime;
+    @JsonProperty("description")
+    private String description;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    /**
-     * No args constructor for use in serialization
-     *
-     */
-    public Geo() {
+    @JsonProperty("dateTime")
+    public String getDateTime() {
+        return dateTime;
     }
 
-    /**
-     *
-     * @param lng
-     * @param lat
-     */
-    public Geo(String lat, String lng) {
-        super();
-        this.lat = lat;
-        this.lng = lng;
+    @JsonProperty("dateTime")
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
     }
 
-    @JsonProperty("lat")
-    public String getLat() {
-        return lat;
+    @JsonProperty("description")
+    public String getDescription() {
+        return description;
     }
 
-    @JsonProperty("lat")
-    public void setLat(String lat) {
-        this.lat = lat;
-    }
-
-    @JsonProperty("lng")
-    public String getLng() {
-        return lng;
-    }
-
-    @JsonProperty("lng")
-    public void setLng(String lng) {
-        this.lng = lng;
+    @JsonProperty("description")
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @JsonAnyGetter
