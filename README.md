@@ -71,4 +71,4 @@ Frontend: <http://localhost:3000/>
 
 You can stop the backend server to see the connection lost between front-end and backend, therefore verify this is an actual working project.
 
-[lost connection](https://i.imgur.com/jN2AmWP.png)
+![lost connection](https://i.imgur.com/jN2AmWP.png)
