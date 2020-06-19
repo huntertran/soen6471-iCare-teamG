@@ -1,35 +1,21 @@
-SOEN6471 - TEAM G - iCare project
----
+# This Branch is the source code of Hai-feng Wu's part 6
 
-<!-- TOC -->
+![alt](https://i.imgur.com/pLkPlvu.png)
 
-- [1. Team Agreement](#1-team-agreement)
-    - [1.1. Tools](#11-tools)
-    - [1.2. Roles and Responsibilities](#12-roles-and-responsibilities)
-    - [1.3. Team Meeting](#13-team-meeting)
+Our group did part-6 individually, so I didn't implement register part, so if you want to test this functionality, you have to add users to mysql database by SQL statement directly. And then you can login, after certain time, you will be logged out in the server side, so that next time you start a new request, you have to login again.
 
-<!-- /TOC -->
+You can find the principle of springMVC's interceptor. And the interceptor I wrote is `LoginCheck.java`. The most important part of the code is:
+```java
+LoginCheck.java
+//If request have a valid user in session, reset it once again, and give it 5 seconds alive time.
+request.getSession().setAttribute("user", userSession);
+request.getSession().setMaxInactiveInterval(5);
+```
 
-# 1. Team Agreement
-<a id="markdown-Team%20Agreement" name="Team%20Agreement"></a>
+![alt](https://i.imgur.com/ydSjqIg.png)
 
-## 1.1. Tools
-<a id="markdown-Tools" name="Tools"></a>
-
-* UML tool: draw.io
-* UML specific version: define later
-* Latex document: [Overleaf](https://www.overleaf.com/project/5ebc50fe232e7c0001a26413)
-* Shared collaboration documents: [SOEN6471 Project folder on Google Drive](https://drive.google.com/drive/u/0/folders/1XqrZC_K5GWKAGo5Gh2oxO0GH3G9naT53)
-
-## 1.2. Roles and Responsibilities
-<a id="markdown-Roles%20and%20Responsibilities" name="Roles%20and%20Responsibilities"></a>
-
-
-
-## 1.3. Team Meeting
-<a id="markdown-Team%20Meeting" name="Team%20Meeting"></a>
-
-* Saturday: 4PM
-* Wednesday: 4PM
-
-Setup the topic for each meeting
+# How to run this implementation
+- Have to have `mysql` installed, the version should be consistent with maven dependency.
+- Import pom.xml to intelliJ-Idea
+- Find `HospitalInformatic.java`, here is the entry point of this program.
+- Open the browser, go to `localhost:8080`
